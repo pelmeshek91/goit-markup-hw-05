@@ -622,17 +622,22 @@ address {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   top: 0;
-  transition: opacity 250ms, transform 250ms;
+  opacity: 1;
+  transition: opacity var(--transition);
 }
 
 .modal {
   position: absolute;
-  width: 528px;
-  height: 580px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
+  min-width: 528px;
+  min-height: 580px;
+
   background-color: #ffffff;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--transition);
 }
 
 .btn-close {
@@ -642,9 +647,13 @@ address {
   right: 8px;
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
 .backdrop.is-hidden {
   opacity: 0;
-  visibility: hidden;
+  /* visibility: hidden; */
   pointer-events: none;
-  transform: scale(50%, 50%);
+  /* transform: scale(50%, 50%); */
 }
