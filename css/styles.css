@@ -494,6 +494,7 @@ address {
 
 .portfolio-card {
   position: relative;
+  overflow: hidden;
 }
 
 .card-text {
@@ -511,6 +512,13 @@ address {
 
   color: var(--main-title-color);
   background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform var(--transition);
+}
+
+.portfolio-card:hover .card-text {
+  transform: translateY(0);
 }
 
 .portfolio-work-item:hover,
@@ -605,4 +613,38 @@ address {
 
 .footer-color {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ----------MODAL WINDOW -----------*/
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  transition: opacity 250ms, transform 250ms;
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 580px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+}
+
+.btn-close {
+  background-color: unset;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(50%, 50%);
 }

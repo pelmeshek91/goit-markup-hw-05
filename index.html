@@ -62,7 +62,7 @@
     <main>
       <section class="hero">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <button class="btn" type="button">Заказать услугу</button>
+        <button class="btn" type="button" data-modal-open>Заказать услугу</button>
       </section>
 
       <section class="section reason">
@@ -125,7 +125,7 @@
           </ul>
         </div>
       </section>
-
+      <!----------------------- ЧЕМ МЫ ЗАНИМАЕМСЯ  ---------------------->
       <section class="section work">
         <div class="container">
           <h2 class="work-title">Чем мы занимаемся</h2>
@@ -169,7 +169,7 @@
           </ul>
         </div>
       </section>
-      <!-- комрады -->
+      <!------------------------- TEAM ---------------------------->
       <section class="section team">
         <div class="container">
           <h2 class="team-title">Наша команда</h2>
@@ -349,6 +349,7 @@
           </ul>
         </div>
       </section>
+      <!---------------------- CLIENTS ----------------------------->
       <section class="section clients">
         <div class="container">
           <h2 class="clients-title">Постоянные клиенты</h2>
@@ -398,7 +399,7 @@
           </ul>
         </div>
       </section>
-
+      <!----------------------- FOOTER ------------------------------>
       <footer class="footer">
         <div class="container footer-overlay">
           <div class="footer-contact">
@@ -456,6 +457,17 @@
           </div>
         </div>
       </footer>
+      <!----------------------- MODAL WINDOW ------------------------->
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="btn-close" type="button" data-modal-close>
+            <svg class="close-icon" width="30" height="30">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </main>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
