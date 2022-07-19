@@ -332,9 +332,6 @@ address {
 
 }
 
-.no-gap {
-  display: block;
-}
 
 .work-title,
 .team-title,
@@ -513,7 +510,7 @@ address {
   color: var(--main-title-color);
   background-color: rgba(33, 150, 243, 0.9);
 
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform var(--transition);
 }
 
